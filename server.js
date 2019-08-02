@@ -61,6 +61,14 @@ app.get('/about',(req, res) => {
     });
 });
 
+
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs',{
+    pageTitle:'Projects',
+    heading:'Projects Page',
+    message:'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+  });
+});
 // /bad send back json data with errorMessage
  app.get('/bad', (req, res) => {
      res.send({errorMessage : 'Unable to handle the request'});
